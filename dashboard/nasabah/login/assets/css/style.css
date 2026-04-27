@@ -1,0 +1,63 @@
+/* =======================================================
+   🌿 GreenPoint Custom Styles
+   Tambahan efek lembut & interaksi ringan di luar Tailwind
+   ======================================================= */
+
+/* Scroll halus ke anchor link (#tujuan, #program, dll) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animasi fade untuk elemen yang muncul */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Transisi global untuk semua elemen */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Navbar shadow saat discroll */
+nav {
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Efek hover untuk tombol dan link */
+button, a {
+  transition: all 0.25s ease-in-out;
+}
+
+/* Biar tampilan gambar tim rapi */
+.team-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Footer text smooth */
+footer p {
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+
+/* Mode gelap transisi lebih lembut */
+body.dark {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
